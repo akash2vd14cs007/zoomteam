@@ -1,0 +1,126 @@
+<ul class="nav justify-content-end items">
+        <h1 class="header">Manage Designation </h1>
+        <li class="nav-item">
+
+         <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle flipInX" type="button" data-toggle="dropdown" data-hover="dropdown"  data-animations="flipInX fadeInLeft fadeInUp fadeInRight" >
+                    <i class="fa fa-file-o"></i> Manage Organizations & Users <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+            </li><a routerLink='/doc'>All Documents</a>
+
+              <li><a routerLink="/design">Designations</a></li>
+              </ul>
+              </div>
+
+         </li>
+
+
+         <div class="vertical">
+
+        </div>
+
+        <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-plus"></i>Create Project</a>
+        </li>
+        <div class="vertical">
+
+        </div>
+
+        <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Time Sheets</a>
+        </li>
+        <div class="vertical">
+
+        </div>
+        <li class="nav-item">
+        <a class="nav-link " href="#"><i class="fa fa-edit" aria-hidden="true"></i>Edit Projects</a>
+        </li>
+        </ul>
+        <p-growl [(value)]="msgs"></p-growl>
+        <div class="main-container container-fluid">
+
+                <div class="data-container zoomIn">
+                        <span class="doctype">Designations</span>
+                        <button class="btn btn-lg btn-warning text-white float-right" (click)="openAdd(kiran,'Add')">Add new
+                                Designation</button>
+
+<table class='table table-striped table-sm table-responsive-sm table-hover'>
+    <thead >
+
+            <th>Index</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th id='text-align-right'>Actions</th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of arrDesig; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>
+                <a class="btnedit" (click)="openEdit(kiran,'Edit',i,item)">Edit</a> |
+                <a class="btndel" (click)="confirmDelete(item.id)">Delete</a></td>
+        </tr>
+    </tbody>
+
+</table>
+<div class="pagination">
+
+    <ngb-pagination  *ngIf="pageVariable" [collectionSize]="totalItem"  [(page)]="page" (pageChange)="loadPage(Page)" currentPage="Page" [rotate]="true" size="sm" [boundaryLinks]="true"></ngb-pagination> <br>
+
+    </div>
+</div>
+
+</div>
+
+<ng-template #kiran let-modal>
+    <div class="modal-header">
+        <h4>Add/Edit Designation</h4>
+        <button type="button" class="btn btn-danger" (click)="modal.dismiss('Cross click')">Close
+            <!-- <span aria-hidden="true">Close</span> -->
+        </button>
+    </div>
+    <div class="modal-body">
+        <!-- <div class='col-6'> -->
+        <form (ngSubmit)='onFormSubmit(f)' #f="ngForm">
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="designation">Designation</label>
+                            <div class="input-group">
+                                <input id="designation" class="form-control" [(ngModel)]="name" placeholder="Name"
+                                    name="Name" required>
+                                <div class="input-group-append">
+                                    <!-- <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button"></button> -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <div class="input-group">
+                                <input id="description" class="form-control" [(ngModel)]="description"
+                                    placeholder="Description" name="Description" required>
+                                <div class="input-group-append">
+                                    <!-- <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button"></button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-dark">{{selectedDesignationOption}} Designation</button>
+            </div>
+        </form>
+    </div>
+    <!-- </div> -->
+
+</ng-template>
+<p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>

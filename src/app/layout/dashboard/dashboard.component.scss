@@ -1,0 +1,156 @@
+span.card-one {
+    font-size: x-large;
+    font-weight: 500;
+    }
+    .card-sec {
+    width: 221px;
+    float: left;
+    }
+    .icon {
+    float: left;
+
+    height: 100px;
+    width: 80px;
+    margin-top: 0px;
+    margin-left: 23px;
+    }
+
+    img {
+    height: 62px;
+    }
+
+    img.height {
+    height: 62px;
+    }
+
+    span.card-one {
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+    }
+
+    h1.mgr-name {
+    color: cornflowerblue;
+    font-size: 36px;
+    font-weight: 200;
+    }
+
+    tr.table-head {
+    color: gray;
+    }
+
+    th.leave-type {
+    color: cornflowerblue;
+    }
+    .vertical {
+    background-color: #dee2e6;
+    height: 33px;
+    width: 2px;
+    margin-top: 6px;
+    }
+    span.card-minititle {
+    color: green;
+    font-size: 24px;
+    }
+    // .col3Card {
+    // padding: 10px;
+    // margin-right: 10px;
+    // max-width: 23% !important;
+    // float: left;
+    // display: inline-flex;
+    // height: 171px;
+    // }
+    .card1{
+        padding: 12px;
+    margin-right: 10px;
+    float: left;
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    margin-top: -13px;
+
+    }
+    .card2{
+        padding: 12px;
+    margin-right: 10px;
+    float: left;
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    margin-top: -13px;
+
+    }
+
+
+    // .col6Card {
+    // padding: 10px;
+    // margin-right: 10px;
+    // max-width: 48% !important;
+    // float: left;
+    // display: inline-flex;
+    // }
+    .card3{
+        padding: 12px;
+        margin-right: 10px;
+        width: auto;
+        float: left;
+        display: inline-flex;
+        margin-top: -13px;
+
+
+    }
+
+
+    //collapse pannel /
+
+    .expansion {
+    background-color: white;
+    margin: 0px 23px;
+    float: left;
+    width: 98%;
+    }
+    .first-container {
+    height: 360px;
+    background-color: white;
+    margin: 23px;
+    border: 2px solid #e9ecef;
+    width: 98%;
+    }
+    h1.header {
+
+    color: #868e96b5;
+    font-size: xx-large;
+    margin-right: 802px;
+    }
+    img.users {
+    padding: 0px 4px;
+    background-color: #d3d3d352;
+    height: 18px;
+    }
+    .icon {
+        float: right;
+
+        height: 100px;
+        width: 80px;
+        margin-top: 0px;
+        margin-left: 23px;
+        }
+
+    span.card-minititle {
+    color: green;
+    font-size: medium;
+    font-weight: 600;
+    }
+    .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    // background-color: #2196F3;
+    padding: 10px;
+    }
+    .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--gray);
+    padding: 17px;
+    font-size: 20px;
+    text-align: center;
+    }
